@@ -1,0 +1,269 @@
+/* Variables */
+:root {
+  --color-primary: #44D6E9;
+  --color-secondary: #D1E0DB;
+
+  --color-text: #ECF4F1;
+
+  --color-background-primary: #333;
+  --color-background-secondary: #3698A6;
+  --color-background-secondary-dark: #1f464d;
+
+  --col-gap: 15px;
+  --col-gap-negative: -15px;
+}
+
+/* Basic */
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-background-primary);
+  color: var(--color-text);
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 200px;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  user-select: none;
+}
+
+/* Button */
+.btn {
+  appearance: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  padding: 6px 70px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  min-width: 150px;
+}
+
+.btn:active,
+.btn:focus {
+  outline: 0;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-background-secondary);
+  color: var(--color-secondary);
+  box-shadow: 3px 3px 35px 0 rgba(54, 151, 166, 0.1);
+  transition: background-color .3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-background-secondary-dark);
+}
+
+/* Headings */
+.base-heading-main {
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: 100;
+}
+
+.base-heading {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 100;
+}
+
+/* Main Header */
+.main-header {
+  background-color: var(--color-background-secondary-dark);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 3px 3px 35px 0 rgba(54, 151, 166, 0.05);
+}
+
+/* Main Nav */
+.main-nav {
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  margin-right: 35px;
+}
+
+.main-nav li:last-child {
+  margin-right: 15px;
+}
+
+.main-nav a {
+  display: block;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-text);
+  transition: color .3s ease;
+  transition-property: color, transform;
+  padding: 25px 0;
+}
+
+.main-nav a:hover {
+  color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+
+/* About me */
+.about-me {
+  margin-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-me-image-wrap {
+  width: 300px;
+  height: 400px;
+  box-shadow: 3px 3px 35px 0 rgba(54, 151, 166, 0.1);
+  position: relative;
+}
+
+.about-me-image-wrap::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54, 151, 166, 0.2);
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.about-me-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-me-content p {
+  margin-bottom: 55px;
+  max-width: 70ch;
+  max-width: 500px;
+}
+
+/* My Work */
+.my-work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: var(--col-gap-negative);
+  margin-left: var(--col-gap-negative);
+
+}
+
+.my-work-list-col {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+  width: 100%;
+  min-height: 1px;
+  padding-left: var(--col-gap);
+  padding-right: var(--col-gap);
+
+}
+
+/* Work item */
+.work-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background-secondary);
+  height: 100%;
+  box-shadow: 3px 3px 35px 0 rgba(54, 151, 166, 0.05);
+}
+
+.work-item-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.work-item-image::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54, 151, 166, 0.2);
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.work-item-image::after {
+  position: absolute;
+  content: "";
+  width: 90%;
+  height: 90%;
+  border: 1px solid rgba(255, 255, 255, 0.312);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.work-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-item-image-content {
+  padding: 15px;
+}
+
+.work-item-image-content h3 {
+  text-transform: uppercase;
+}
+
+.work-item-image-content p {
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+/* Main Footer */
+.main-footer {
+  text-align: center;
+  margin-bottom: 50px;
+}

@@ -1,0 +1,44 @@
+/* Variables */
+:root {
+  --color-primary: #44D6E9;
+  --color-secondary: #D1E0DB;
+
+  --color-text: #ECF4F1;
+
+  --color-background-primary: #333;
+  --color-background-secondary: #3698A6;
+  --color-background-secondary-dark: #1f464d;
+
+  --col-gap: 15px;
+  --col-gap-negative: -15px;
+}
+
+/* Basic */
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {}
+
+main {}
+
+section {}
+
+
+/* Button */
+
+/* Headings */
+
+/* Main Header */
+
+/* Main Nav */
+
+/* About me */
+
+/* My Work */
+
+/* Work item */
+
+/* Main Footer */
